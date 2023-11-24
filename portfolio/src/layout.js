@@ -1,3 +1,4 @@
+import React from 'react'
 import { ThemeProvider } from "styled-components";
 import { useState, useEffect } from "react";
 import { darkTheme, lightTheme } from './utils/Themes.js'
@@ -13,7 +14,6 @@ import Footer from "./components/Footer";
 import Education from "./components/Education";
 import ProjectDetails from "./components/ProjectDetails";
 import styled from "styled-components";
-import Layout from "./layout.js";
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
   width: 100%;
@@ -26,33 +26,31 @@ const Wrapper = styled.div`
   padding: 2rem;
   clip-path: polygon(0 0, 100% 0, 100% 100%,30% 98%, 0 100%);
 `
-function App() {
-  const [darkMode, setDarkMode] = useState(true);
+
+function Layout() {
+    const [darkMode, setDarkMode] = useState(true);
   const [openModal, setOpenModal] = useState({ state: false, project: null });
   console.log(openModal)
   return (
-    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-      <Router >
-        <Route path="/" element={<Layout></Layout>}></Route>
-        {/* <Navbar />
-        <Body>
-          <HeroSection />
-          <Wrapper>
-            <Skills />
-          </Wrapper>
-          <Projects openModal={openModal} setOpenModal={setOpenModal} />
-          <Wrapper>
-            <Education />
-            <Contact />
-          </Wrapper>
-          <Footer />
-          {openModal.state &&
-            <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
-          }
-        </Body> */}
-      </Router>
-    </ThemeProvider>
-  );
+    <>
+    <Navbar />
+    <Body>
+      <HeroSection />
+      <Wrapper>
+        <Skills />
+      </Wrapper>
+      <Projects openModal={openModal} setOpenModal={setOpenModal} />
+      <Wrapper>
+        <Education />
+        <Contact />
+      </Wrapper>
+      <Footer />
+      {openModal.state &&
+        <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
+      }
+    </Body>
+    </>
+  )
 }
 
-export default App;
+export default Layout
