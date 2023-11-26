@@ -10,7 +10,7 @@ export const Bio = {
     "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
   github: "https://github.com/ashishchaudhari1857",
   resume:
-    "https://drive.google.com/file/d/1bC5_90NtzDdfqJmXmGlIyPajhk7HZvWx/view?usp=sharing",
+    "https://drive.google.com/file/d/1UFkHswhIP_Lq4FJ9WoEjt8y63ichExs5/view?usp=sharing",
   linkedin: "www.linkedin.com/in/ashish-chaudhari-089779197",
   twitter: "https://twitter.com/ASHISHARUNCHAU1",
   insta: "https://www.instagram.com/ashishchaudhari26/",
